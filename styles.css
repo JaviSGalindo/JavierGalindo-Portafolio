@@ -1,39 +1,61 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1E1E1E;
-    color: white;
+    background-color: #121212;
 }
 
 header {
-    background-color: #590B0B;
+    display: flex;
+    background-color: #800020;
     color: white;
-    padding: 1rem;
-    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
     
 }
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.navigation-bar-img {
+    width: 150px;
+    height: auto;
+}
+.navigation-bar-list {
     display: flex;
-    justify-content: center;
-    /* background-color: #590B0B; */
+    list-style: none;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    justify-content: end;
 }
-
-nav ul li {
-    margin: 0;
-    padding: 0.5rem 1rem;
-}
-
-nav ul li a {
-    color: white;
+.navigation-bar-list li a {
     text-decoration: none;
+    color: white;
+    margin-right: 30px;
+    position: relative;
 }
+.navigation-bar-list li a:hover {
+    color: #E0E0E0;
+}
+.navigation-bar-list li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #E0E0E0;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.3s ease;
+}
+
+.navigation-bar-list li a:hover::after {
+    width: 100%;
+}
+
+
+
 
 section {
     padding: 2rem;
