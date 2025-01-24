@@ -1,73 +1,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     padding: 0;
     background-color: #121212;
-}
-
-header {
-    display: flex;
-    background-color: #800020;
     color: white;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    
 }
-.navigation-bar-img {
-    width: 150px;
-    height: auto;
-}
-.navigation-bar-list {
-    display: flex;
-    list-style: none;
-    font-family: 'Lora', serif;
-    font-size: 18px;
-    justify-content: end;
-}
-.navigation-bar-list li a {
-    text-decoration: none;
-    color: white;
-    margin-right: 30px;
-    position: relative;
-}
-.navigation-bar-list li a:hover {
-    color: #E0E0E0;
-}
-.navigation-bar-list li a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 3px;
-    border-radius: 10px;
-    background-color: #E0E0E0;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: width 0.3s ease;
-}
-
-.navigation-bar-list li a:hover::after {
-    width: 100%;
-}
-
-
-
 
 section {
     padding: 2rem;
     text-align: center;
 }
 
-footer {
-    background-color: #590B0B;
-    color: white;
+/* About Section Styles */
+/* About Section Styles */
+#about {
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    color: #E0E0E0;
+    padding: 3rem 2rem;
     text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
+
+.about-heading {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.about-heading h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: white;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.about-heading h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.about-icons {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.about-icons a {
+    color: blue;
+    font-size: 30px;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.about-icons a:hover {
+    color: #800020;
+    transform: scale(1.05);
+}
+
+.about-text {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    color: #E0E0E0;
+    text-align: justify;
+    padding: 2rem;
+    width: 80%;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    word-wrap: break-word;
+}
+
+.about-btn-download-cv {
+    display: inline-flex;
+    align-items: center;
+    background-color: #B22222;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.about-btn-download-cv i {
+    margin-right: 10px;
+}
+
+.about-btn-download-cv:hover {
+    transform: scale(1.05);
+    background-color: #800020;
+}
+/* Fin de About Section Styles */
+
+/* Fin de About Section Styles */
