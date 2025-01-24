@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -8,58 +8,80 @@ body {
     padding: 0;
     background-color: #121212;
     color: white;
+    overflow-x: hidden;
 }
-
-section {
-    padding: 2rem;
-    text-align: center;
-}
-
-/* About Section Styles */
 /* About Section Styles */
 #about {
     background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
     color: #E0E0E0;
-    padding: 3rem 2rem;
     text-align: center;
+    width: 100%;
+}
+.about-container {
+    margin-top: 90px;
+    padding-top: 10px;
+    /* display: flex; */
 }
 
+/* Titulo */
 .about-heading {
-    max-width: 600px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    max-width: 70%;
     margin: 0 auto;
+    margin-top: 30px;
     text-align: center;
-    padding-bottom: 20px;
-}
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+}
+.about-heading:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+}
 .about-heading h1 {
-    font-size: 48px;
+    font-size: 2rem;
     font-weight: 800;
+    padding: 1.5rem;
     color: white;
     word-wrap: break-word;
-    margin-bottom: 10px;
 }
 
 .about-heading h2 {
-    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
     font-weight: 500;
     color: white;
-    text-align: left;
+    padding-bottom: 5px;
     word-wrap: break-word;
 }
+.about-heading img {
+    border-radius: 50px;
+    width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+}
 
+/* Iconos con texto */
 .about-icons {
     display: flex;
-    gap: 80px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .about-icons a {
-    color: blue;
-    font-size: 30px;
+    color: white;
     text-decoration: none;
     transition: transform 0.2s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 40px;
 }
 
 .about-icons a:hover {
@@ -67,34 +89,36 @@ section {
     transform: scale(1.05);
 }
 
+/* Texto de la sección About */
 .about-text {
-    background-color: rgba(255, 255, 255, 0.1);
-    font-size: 18px;
+    font-size: 1.3rem;
     font-family: 'Roboto', sans-serif;
     line-height: 1.8;
     color: #E0E0E0;
     text-align: justify;
     padding: 2rem;
-    width: 80%;
-    margin: 2rem auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    width: 48%;
+    max-width: 60%;
+    margin: auto auto;
+    overflow-x: hidden;
     word-wrap: break-word;
 }
 
+/* Botón de descarga */
 .about-btn-download-cv {
     display: inline-flex;
     align-items: center;
     background-color: #B22222;
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 15px;
+    padding: 15px 20px;
+    border-radius: 20px;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;
     transition: transform 0.2s ease, background-color 0.3s ease;
     margin-top: 30px;
+    margin-bottom: 25px;
 }
 
 .about-btn-download-cv i {
@@ -105,6 +129,47 @@ section {
     transform: scale(1.05);
     background-color: #800020;
 }
-/* Fin de About Section Styles */
 
-/* Fin de About Section Styles */
+@media (max-width: 1024px) {
+    .about-heading {
+        flex-direction: column;
+    }
+    
+}@media (max-width: 768px) {
+    .about-heading h1 {
+        font-size: 36px;
+    }
+
+    .about-heading h2 {
+        font-size: 24px;
+    }
+
+    .about-text {
+        width: 80%;
+        max-width: 80%;
+    }
+
+    .about-btn-download-cv {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+@media (max-width: 425px){
+    .about-heading {
+        margin: 0 auto;
+        width: 95%;
+        max-width: 95%;
+    }
+    .about-heading {
+        padding: 0;
+    }
+    .about-text{
+        width: 90%;
+        max-width: 90%;
+        padding: 10px;
+        margin: 0 auto;
+    }
+    .about-heading img {
+        width: 200px;
+    }
+}
