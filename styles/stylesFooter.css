@@ -9,7 +9,7 @@ footer {
 
 .footer-sections {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* En pantallas grandes, 4 tarjetas por fila */
+    grid-template-columns: repeat(2, 1fr); /* En pantallas grandes, 4 tarjetas por fila */
     gap: 2rem; /* Espacio entre las tarjetas */
     margin-bottom: 1.5rem;
     width: 100%;
@@ -69,7 +69,7 @@ footer {
 }
 @media (max-width: 1024px) {
     .footer-sections {
-        grid-template-columns: repeat(2, 1fr); /* 2 tarjetas por fila */
+        /* grid-template-columns: repeat(2, 1fr); */
     }
 }
 
