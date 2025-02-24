@@ -23,16 +23,16 @@ header {
 }
 
 .navigation-bar-image img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 40px;
 }
 
 .navigation-bar-list {
     display: flex;
     list-style: none;
-    font-family: 'Lora', serif;
-    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
     justify-content: end;
 }
 
@@ -79,28 +79,69 @@ header {
     background-color: white;
     border-radius: 5px;
 }
-
-@media (max-width: 768px) {
-    .navigation-bar-list {
-        display: none;
-        width: 100%;
-        background-color: #800020;
-        text-align: center;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 20px;
-    }
-
-    .navigation-bar-list.active {
-        display: block;
-    }
-
-    .hamburger-menu {
-        display: flex;
-    }
-}
-
 .navigation-bar-list.active li {
     animation: fadeIn 0.3s ease-in-out;
 }
+
+@media (max-width: 952px) {
+    .hamburger-menu {
+        display: flex;
+        position: absolute;
+        right: 2rem;
+    }
+
+    .navigation-bar-list {
+        visibility: hidden;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        margin: 1rem 1rem;
+        background-color: #800020;
+        text-align: center;
+        position: absolute;
+        top: 6rem;
+        right: 0.1rem;
+        padding: 20px 0;
+        font-weight: 400;
+        border-radius: 18px;
+
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+        transition: opacity 0.3 ease-out, transform 0.3s ease-out;
+    }
+
+    .navigation-bar-list.active {
+        visibility: visible; 
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .navigation-bar-list li {
+        margin: 0.5rem 0;
+        opacity: 0;
+        transform: translateX(-10px);
+        transition: opacity 0.3 ease-out, transform 0.3s ease-out;
+    }
+
+    .navigation-bar-list.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .navigation-bar-list li a {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 5px 20px;
+        display: block;
+        transition: color 0.3s ease;
+        margin-right: 0px;
+    }
+    .navigation-bar-list li a::after {
+        content: none;
+    }
+}
+
+
