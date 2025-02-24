@@ -34,6 +34,8 @@ header {
     font-family: 'Roboto', sans-serif;
     font-size: 1.3rem;
     justify-content: end;
+    align-items: center;
+    align-content: center;
 }
 
 .navigation-bar-list li a {
@@ -41,6 +43,7 @@ header {
     color: white;
     margin-right: 30px;
     position: relative;
+    top: 8px;
 }
 
 .navigation-bar-list li a:hover {

@@ -15,14 +15,14 @@
 }
 
 #contact p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family: "Roboto", sans-serif;
 }
 
 #contact a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 400;
     transition: color 0.3s ease;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .contact-links i {
-    font-size: 3rem;
+    font-size: 2.5rem;
     transition: transform 0.3s ease;
 }
 
